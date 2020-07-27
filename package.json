@@ -1,0 +1,32 @@
+{
+  "name": "nextjs-mdx-blog-starter",
+  "description": "Starter for creating a Next.js powered blog with content authored in MDX.",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "format-watch": "npm run format && onchange \"**/*.{js,jsx,json,md}\" -- prettier --write {{changed}}",
+    "deploy": "git push origin master && now --prod"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@mdx-js/loader": "^1.6.14",
+    "@mdx-js/runtime": "^1.6.14",
+    "@next/mdx": "^9.4.4",
+    "gray-matter": "^4.0.2",
+    "next": "^9.4.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-ga": "^3.1.2",
+    "theme-ui": "^0.3.1"
+  },
+  "devDependencies": {
+    "onchange": "^7.0.2",
+    "prettier": "^2.0.5"
+  },
+  "repository": "https://github.com/johnpolacek/nextjs-mdx-blog-starter",
+  "license": "MIT-0"
+}
