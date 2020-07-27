@@ -7,16 +7,4 @@ module.exports = {
   analytics: "UA-2821890-19",
   shareImage: "https://nextjs-mdx-blog-starter.now.sh/screenshot.png",
   shareImageAlt: "Next.js MDX Blog Starter Screenshot",
-  footerLinks: [
-    {
-      label: "Twitter",
-      text: "@johnpolacek",
-      href: "https://twitter.com/johnpolacek",
-    },
-    {
-      label: "Github",
-      text: "github.com/johnpolacek",
-      href: "https://github.com/johnpolacek",
-    },
-  ],
 }
