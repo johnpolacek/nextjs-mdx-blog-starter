@@ -28,7 +28,7 @@ export default (props) => (
             fontSize: 3,
             borderRadius: "4px",
           }}
-          href="#"
+          href="https://github.com/johnpolacek/nextjs-mdx-blog-starter"
         >
           View on Github
         </a>
