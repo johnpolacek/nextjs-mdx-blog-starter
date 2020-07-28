@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui"
 import React, { useContext } from "react"
 
-export default (props) => {
+const Main = (props) => {
   return (
     <main
       sx={{
@@ -20,3 +20,5 @@ export default (props) => {
     />
   )
 }
+
+export default Main

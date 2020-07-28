@@ -7,7 +7,7 @@ import { Box, Heading } from "theme-ui"
 import Nav from "./Nav"
 import ButtonLink from "../ui/ButtonLink"
 
-export default (props) => (
+const Header = (props) => (
   <MDXProvider>
     <Box as="header" sx={{ textAlign: "center", pt: 4 }}>
       <Heading sx={{ fontSize: 6, pb: 2 }} as="h1">
@@ -37,3 +37,5 @@ export default (props) => (
     </Box>
   </MDXProvider>
 )
+
+export default Header

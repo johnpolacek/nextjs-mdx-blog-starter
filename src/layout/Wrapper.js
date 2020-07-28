@@ -6,7 +6,7 @@ import Theme from "./Theme"
 import config from "../../blog.config"
 import ReactGA from "react-ga"
 
-export default (props) => {
+const Wrapper = (props) => {
   if (config.analytics) {
     ReactGA.initialize(config.analytics)
     ReactGA.set({ anonymizeIp: true })
@@ -21,3 +21,5 @@ export default (props) => {
     </ThemeProvider>
   )
 }
+
+export default Wrapper

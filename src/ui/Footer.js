@@ -1,6 +1,6 @@
 import { Box, Text } from "theme-ui"
 
-export default (props) => (
+const Footer = (props) => (
   <Box
     as="footer"
     sx={{
@@ -24,3 +24,5 @@ export default (props) => (
     </Text>
   </Box>
 )
+
+export default Footer
