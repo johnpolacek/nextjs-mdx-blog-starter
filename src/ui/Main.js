@@ -1,10 +1,10 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+import { Box } from "theme-ui"
 import React, { useContext } from "react"
 
 const Main = (props) => {
   return (
-    <main
+    <Box
+      as="main"
       sx={{
         display: "flex",
         flex: 1,

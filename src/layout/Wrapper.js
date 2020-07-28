@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
 import { ThemeProvider } from "theme-ui"
 import Layout from "./Layout"
 import Theme from "./Theme"
