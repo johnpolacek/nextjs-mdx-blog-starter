@@ -14,7 +14,11 @@ const Home = ({ posts, prevPosts, nextPosts }) => (
     {posts &&
       posts.map((post) => (
         <Box sx={{ pb: 5 }} key={post.slug}>
-          <Heading>{post.title}</Heading>
+          <Heading sx={{ pb: 2 }}>
+            <Link href={"/" + post.slug} passHref>
+              <a>{post.title}</a>
+            </Link>
+          </Heading>
           <Text sx={{ pb: 3 }}>{post.excerpt}</Text>
           <Link href={"/" + post.slug} passHref>
             <a>Read more...</a>
