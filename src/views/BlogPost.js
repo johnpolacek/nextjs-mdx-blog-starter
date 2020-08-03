@@ -1,8 +1,17 @@
 import MDX from "@mdx-js/runtime"
+import config from "../../blog.config"
+import { DiscussionEmbed } from "disqus-react"
 import { Box, Heading } from "theme-ui"
 import Link from "next/link"
 
 const BlogPost = ({ post }) => {
+  console.log({
+    url: config.url + post.slug,
+    identifier: post.slug,
+    title: post.title,
+    language: "en",
+  })
+
   const components = {
     Box: (props) => <Box {...props} />,
   }
@@ -13,6 +22,17 @@ const BlogPost = ({ post }) => {
         {post.title}
       </Heading>
       <MDX components={components}>{post.content}</MDX>
+      {config.disqus && (
+        <DiscussionEmbed
+          shortname={post.title}
+          config={{
+            url: config.url,
+            identifier: post.slug,
+            title: post.title,
+            language: "en",
+          }}
+        />
+      )}
     </Box>
   )
 }
