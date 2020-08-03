@@ -9,5 +9,5 @@ module.exports = {
   shareImage: "https://nextjs-mdx-blog-starter.now.sh/screenshot.png",
   shareImageAlt: "Next.js MDX Blog Starter Screenshot",
   postsPerPage: 8,
-  disqus: "https-nextjs-mdx-blog-starter-vercel-app", // your disqus shortname, remove if you don't use disqus
+  disqus: "", // your disqus shortname, remove if you don't use disqus
 }

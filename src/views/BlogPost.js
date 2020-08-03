@@ -15,7 +15,7 @@ const BlogPost = ({ post }) => {
         {post.title}
       </Heading>
       <MDX components={components}>{post.content}</MDX>
-      {typeof config.disqus === "string" && (
+      {typeof config.disqus === "string" && config.disqus !== "" && (
         <DiscussionEmbed
           shortname={config.disqus}
           config={{
