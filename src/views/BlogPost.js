@@ -5,13 +5,6 @@ import { Box, Heading } from "theme-ui"
 import Link from "next/link"
 
 const BlogPost = ({ post }) => {
-  console.log({
-    url: config.url + post.slug,
-    identifier: post.slug,
-    title: post.title,
-    language: "en",
-  })
-
   const components = {
     Box: (props) => <Box {...props} />,
   }
@@ -22,11 +15,11 @@ const BlogPost = ({ post }) => {
         {post.title}
       </Heading>
       <MDX components={components}>{post.content}</MDX>
-      {config.disqus && (
+      {typeof config.disqus === "string" && (
         <DiscussionEmbed
-          shortname={post.title}
+          shortname={config.disqus}
           config={{
-            url: config.url,
+            url: config.url + post.slug,
             identifier: post.slug,
             title: post.title,
             language: "en",
