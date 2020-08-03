@@ -20,6 +20,14 @@ You can find the markdown content and blog post files in `src/markdown`.
 
 To edit the styling of the site, you can make changes to the theme file at `src/layout/Theme.js`. To further customize the site, refer to the [Theme UI documentation](https://theme-ui.com/getting-started) for making and styling your own components.
 
+---
+
+#### Future Improvements
+
+* Pagination Option
+* Previous/Next Post Navigation
+* Option to include Disqus
+
 
 
 

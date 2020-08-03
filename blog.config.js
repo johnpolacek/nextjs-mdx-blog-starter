@@ -7,4 +7,5 @@ module.exports = {
   analytics: "UA-2821890-19",
   shareImage: "https://nextjs-mdx-blog-starter.now.sh/screenshot.png",
   shareImageAlt: "Next.js MDX Blog Starter Screenshot",
+  postsPerPage: 8,
 }

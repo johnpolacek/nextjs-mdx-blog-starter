@@ -1,7 +1,7 @@
-import config from "../blog.config"
-import Wrapper from "../src/layout/Wrapper"
-import Home from "../src/views/Home"
-import { getAllPosts } from "../src/api"
+import config from "../../blog.config"
+import Wrapper from "../../src/layout/Wrapper"
+import Home from "../../src/views/Home"
+import { getAllPosts } from "../../src/api"
 
 const PostsPage = ({ posts, prevPosts, nextPosts }) => (
   <Wrapper url="/" title={config.title} description={config.description}>
@@ -9,7 +9,7 @@ const PostsPage = ({ posts, prevPosts, nextPosts }) => (
   </Wrapper>
 )
 
-export async function getStaticProps() {
+export async function getStaticProps({ params }) {
   const posts = getAllPosts([
     "title",
     "date",
@@ -19,10 +19,12 @@ export async function getStaticProps() {
     "excerpt",
   ])
 
-  const startIndex = 0
-  const endIndex = config.postsPerPage
-  const prevPosts = null
-  const nextPosts = endIndex >= posts.length ? null : 1
+  const pageIndex = parseInt(params.page)
+  const startIndex = pageIndex * config.postsPerPage
+  const endIndex = (pageIndex + 1) * config.postsPerPage
+
+  const prevPosts = pageIndex > 0 ? pageIndex - 1 : null
+  const nextPosts = endIndex >= posts.length ? null : pageIndex + 1
 
   return {
     props: { posts: posts.slice(startIndex, endIndex), prevPosts, nextPosts },

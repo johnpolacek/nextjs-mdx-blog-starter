@@ -1,7 +1,7 @@
-import { Box, Heading, Text } from "theme-ui"
+import { Flex, Box, Heading, Text } from "theme-ui"
 import Link from "next/link"
 
-const Home = ({ posts }) => (
+const Home = ({ posts, prevPosts, nextPosts }) => (
   <Box
     id="home"
     sx={{
@@ -21,6 +21,22 @@ const Home = ({ posts }) => (
           </Link>
         </Box>
       ))}
+    <Flex sx={{ fontStyle: "italic" }}>
+      <Box sx={{ width: "50%", py: 3, textAlign: "left" }}>
+        {prevPosts !== null && (
+          <Link href={"/posts/" + prevPosts} passHref>
+            <a>« see newer posts</a>
+          </Link>
+        )}
+      </Box>
+      <Box sx={{ width: "50%", py: 3, pr: 3, textAlign: "right" }}>
+        {nextPosts !== null && (
+          <Link href={"/posts/" + nextPosts} passHref>
+            <a>see older posts »</a>
+          </Link>
+        )}
+      </Box>
+    </Flex>
   </Box>
 )
 
