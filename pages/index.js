@@ -29,17 +29,4 @@ export async function getStaticProps() {
   }
 }
 
-export async function getStaticPaths() {
-  const numPages = getAllPosts().length % config.postsPerPage
-
-  return {
-    paths: [...Array(numPages)].map((v, i) => {
-      return {
-        params: { page: i.toString() },
-      }
-    }),
-    fallback: false,
-  }
-}
-
 export default PostsPage
