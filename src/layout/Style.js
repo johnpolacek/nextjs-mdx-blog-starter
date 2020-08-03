@@ -21,7 +21,7 @@ const Style = (props) => (
       padding: 0;
     }
     html {
-      line-height: 1.2;
+      line-height: 1.5;
       -webkit-text-size-adjust: 100%;
     }
     body {
@@ -191,7 +191,6 @@ const Style = (props) => (
     h5,
     h6 {
       text-rendering: optimizelegibility;
-      line-height: 1.2;
       margin: 0 0 16px;
       font-family: ${theme.fonts.heading};
     }
