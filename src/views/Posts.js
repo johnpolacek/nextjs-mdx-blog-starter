@@ -1,9 +1,8 @@
 import { Flex, Box, Heading, Text } from "theme-ui"
 import Link from "next/link"
 
-const Home = ({ posts, prevPosts, nextPosts }) => (
+const Posts = ({ posts, prevPosts, nextPosts }) => (
   <Box
-    id="home"
     sx={{
       py: 5,
       px: 3,
@@ -44,4 +43,4 @@ const Home = ({ posts, prevPosts, nextPosts }) => (
   </Box>
 )
 
-export default Home
+export default Posts
