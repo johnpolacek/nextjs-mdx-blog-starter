@@ -10,7 +10,7 @@ const BlogPost = ({ post }) => {
   }
 
   return (
-    <Box sx={{ maxWidth: "960px", mx: "auto", px: [3, 4, 5], py: 5 }}>
+    <Box sx={{ maxWidth: "800px", mx: "auto", px: [3, 4, 5], py: 5 }}>
       <Heading as="h1" sx={{ pb: [3, 4], fontSize: [5, 6] }}>
         {post.title}
       </Heading>

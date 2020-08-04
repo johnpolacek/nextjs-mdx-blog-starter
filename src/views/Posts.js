@@ -6,7 +6,7 @@ const Posts = ({ posts, prevPosts, nextPosts }) => (
   <Box
     sx={{
       py: 5,
-      px: 3,
+      px: [3, 4, 5],
       maxWidth: "800px",
       mx: "auto",
     }}
@@ -31,7 +31,7 @@ const Posts = ({ posts, prevPosts, nextPosts }) => (
               alt={post.coverImageAlt || ""}
             />
           )}
-          <Box>
+          <Box sx={{ pb: 3 }}>
             <MDX>{post.excerpt}</MDX>
           </Box>
           <Link href={"/" + post.slug} passHref>

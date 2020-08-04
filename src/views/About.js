@@ -7,8 +7,8 @@ const Home = (props) => (
     <Box
       id="home"
       sx={{
-        px: 3,
-        maxWidth: "1100px",
+        px: [3, 4, 5],
+        maxWidth: "800px",
         mx: "auto",
         textAlign: "center",
       }}
