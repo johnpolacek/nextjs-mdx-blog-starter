@@ -1,7 +1,7 @@
 import MDX from "@mdx-js/runtime"
 import config from "../../blog.config"
 import { DiscussionEmbed } from "disqus-react"
-import { Box, Heading } from "theme-ui"
+import { Box, Heading, Image } from "theme-ui"
 import Link from "next/link"
 
 const BlogPost = ({ post }) => {
@@ -14,6 +14,17 @@ const BlogPost = ({ post }) => {
       <Heading as="h1" sx={{ pb: [3, 4], fontSize: [5, 6] }}>
         {post.title}
       </Heading>
+      {post.coverImage && (
+        <Image
+          sx={{
+            mb: 3,
+            border: "1px solid",
+            borderColor: "rgba(0,0,0,.1)",
+          }}
+          src={post.coverImage}
+          alt={post.coverImageAlt || ""}
+        />
+      )}
       <MDX components={components}>{post.content}</MDX>
       {typeof config.disqus === "string" && config.disqus !== "" && (
         <DiscussionEmbed
