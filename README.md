@@ -24,7 +24,19 @@ To edit the styling of the site, you can make changes to the theme file at `src/
 
 To write a new post, create a new `.mdx` file in the `src/markdown/posts` directory.
 
-Update the front-matter for the post with its title, excerpt, cover image and the publication date. The excerpt will appear on the posts listing and can be formatted in markdown. If included, the cover image will be displayed above the excerpt and post content. It will also be the main image that appears when the post is shared on social media.
+Update the front-matter for the post with its title, excerpt, cover image and the publication date. 
+
+#### Title
+
+The title will appear at the top of the post and will be used in the meta tags for the page.
+
+#### Excerpt
+
+The excerpt will appear on the posts listing and as the meta description for the post page. It can be formatted in markdown. 
+
+#### Cover Image
+
+If included, the cover image will be displayed above the excerpt and post content. It will also be the main image that appears when the post is shared on social media. Be sure to also set the cover image alt value for accessibility.
 
 
 
