@@ -14,24 +14,8 @@ const Header = (props) => (
         {config.title}
       </Heading>
       <Heading sx={{ pb: 3 }}>{config.subtitle}</Heading>
-      <Box sx={{ pb: 4 }}>
+      <Box sx={{ pb: 3 }}>
         <Blurb />
-      </Box>
-      <Box sx={{ pb: 5 }}>
-        <a
-          sx={{
-            bg: "primary",
-            px: 4,
-            py: 3,
-            color: "white",
-            textDecoration: "none",
-            fontSize: 3,
-            borderRadius: "4px",
-          }}
-          href="https://github.com/johnpolacek/nextjs-mdx-blog-starter"
-        >
-          View on Github
-        </a>
       </Box>
       <Nav />
     </Box>

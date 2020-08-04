@@ -16,7 +16,7 @@ npm install && vercel deploy
 
 You can set properties like your blog title, description, Google Analytics code, social media sharing image and more by editing `blog.config.js`
 
-You can find the markdown content and blog post files in `src/markdown`.
+Content for the about page and the blurb in the header are written in markdown/mdx. You can find markdown content and blog post files in `src/markdown`.
 
 To edit the styling of the site, you can make changes to the theme file at `src/layout/Theme.js`. To further customize the site, refer to the [Theme UI documentation](https://theme-ui.com/getting-started) for making and styling your own components.
 
