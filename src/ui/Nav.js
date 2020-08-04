@@ -9,7 +9,10 @@ const Nav = (props) => {
       as="nav"
       sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
     >
-      <NavLink href="/" active={router.pathname === "/" || router.pathname.includes("/posts")}>
+      <NavLink
+        href="/"
+        active={router.pathname === "/" || router.pathname.includes("/posts")}
+      >
         Blog
       </NavLink>
       <NavLink href="/about" active={router.pathname === "/about"}>

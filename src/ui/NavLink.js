@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui"
 import Link from "next/link"
 
-const NavLink = ({href, active, children}) => (
+const NavLink = ({ href, active, children }) => (
   <Link href={href}>
     <a
       sx={{
@@ -14,9 +14,11 @@ const NavLink = ({href, active, children}) => (
         textDecoration: "none",
         borderBottom: "1px solid",
         borderColor: active ? "primary" : "white",
-        cursor: "pointer"
+        cursor: "pointer",
       }}
-      >{children}</a>
+    >
+      {children}
+    </a>
   </Link>
 )
 

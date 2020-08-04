@@ -5,7 +5,7 @@ import config from "../../blog.config"
 import ReactGA from "react-ga"
 
 const Wrapper = (props) => {
-  if (typeof(config.analytics) === 'string' && config.analytics !== "") {
+  if (typeof config.analytics === "string" && config.analytics !== "") {
     ReactGA.initialize(config.analytics)
     ReactGA.set({ anonymizeIp: true })
     if (typeof window !== "undefined") {
