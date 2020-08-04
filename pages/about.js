@@ -7,6 +7,8 @@ export default () => (
     url="/about"
     title={config.title + " | About"}
     description={"Learn more about " + config.title}
+    imageUrl={config.shareImage} 
+    imageAlt={config.shareImageAlt}
   >
     <About />
   </Wrapper>

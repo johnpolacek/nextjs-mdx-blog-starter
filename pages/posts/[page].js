@@ -4,7 +4,13 @@ import Posts from "../../src/views/Posts"
 import { getAllPosts } from "../../src/api"
 
 const PostsPage = ({ posts, prevPosts, nextPosts, pageIndex }) => (
-  <Wrapper url="/" title={config.title + " | Posts | "+(pageIndex+1)} description={config.description}>
+  <Wrapper 
+    url="/" 
+    title={config.title + " | Posts | "+(pageIndex+1)} 
+    description={config.description} 
+    imageUrl={config.shareImage} 
+    imageAlt={config.shareImageAlt}
+  >
     <Posts posts={posts} prevPosts={prevPosts} nextPosts={nextPosts} />
   </Wrapper>
 )
