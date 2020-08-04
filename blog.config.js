@@ -5,7 +5,7 @@ module.exports = {
   description:
     "Next.js MDX Blog Starter for building blogs with Next.js and MDX, including Theme UI Component Design System, Vercel Deployment and more.",
   author: "John Polacek",
-  analytics: "UA-2821890-19",
+  analytics: "", // put your google analytics code here to add tracking 
   shareImage: "https://nextjs-mdx-blog-starter.now.sh/screenshot.png",
   shareImageAlt: "Next.js MDX Blog Starter Screenshot",
   postsPerPage: 8,
