@@ -32,7 +32,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const numPages = getAllPosts().length % config.postsPerPage
+  const numPages = config.postsPerPage % getAllPosts().length
 
   return {
     paths: [...Array(numPages)].map((v, i) => {
