@@ -1,4 +1,5 @@
-import { Flex, Box, Heading, Text } from "theme-ui"
+import MDX from "@mdx-js/runtime"
+import { Flex, Box, Heading } from "theme-ui"
 import Link from "next/link"
 
 const Posts = ({ posts, prevPosts, nextPosts }) => (
@@ -18,7 +19,9 @@ const Posts = ({ posts, prevPosts, nextPosts }) => (
               <a>{post.title}</a>
             </Link>
           </Heading>
-          <Text sx={{ pb: 3 }}>{post.excerpt}</Text>
+          <Box sx={{ pb: 3 }}>
+            <MDX>{post.excerpt}</MDX>
+          </Box>
           <Link href={"/" + post.slug} passHref>
             <a>Read more...</a>
           </Link>
