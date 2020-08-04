@@ -8,7 +8,7 @@ const PostPage = ({ post }) => (
     url="/"
     title={config.title + " | " + post.title}
     description={post.excerpt}
-    imageUrl={post.coverImage}
+    imageUrl={config.url + post.coverImage}
     imageAlt={post.coverImageAlt}
   >
     <BlogPost post={post} />
