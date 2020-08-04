@@ -15,6 +15,10 @@ const NavLink = ({ href, active, children }) => (
         borderBottom: "1px solid",
         borderColor: active ? "primary" : "white",
         cursor: "pointer",
+        transition: "border-color .5s",
+        "&:hover": {
+          borderColor: "primary",
+        },
       }}
     >
       {children}
