@@ -3,8 +3,8 @@ import Wrapper from "../../src/layout/Wrapper"
 import Posts from "../../src/views/Posts"
 import { getAllPosts } from "../../src/api"
 
-const PostsPage = ({ posts, prevPosts, nextPosts }) => (
-  <Wrapper url="/" title={config.title} description={config.description}>
+const PostsPage = ({ posts, prevPosts, nextPosts, pageIndex }) => (
+  <Wrapper url="/" title={config.title + " | Posts | "+(pageIndex+1)} description={config.description}>
     <Posts posts={posts} prevPosts={prevPosts} nextPosts={nextPosts} />
   </Wrapper>
 )
@@ -27,7 +27,7 @@ export async function getStaticProps({ params }) {
   const nextPosts = endIndex >= posts.length ? null : pageIndex + 1
 
   return {
-    props: { posts: posts.slice(startIndex, endIndex), prevPosts, nextPosts },
+    props: { posts: posts.slice(startIndex, endIndex), prevPosts, nextPosts, pageIndex },
   }
 }
 
