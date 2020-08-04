@@ -20,5 +20,12 @@ Content for the about page and the blurb in the header are written in markdown/m
 
 To edit the styling of the site, you can make changes to the theme file at `src/layout/Theme.js`. To further customize the site, refer to the [Theme UI documentation](https://theme-ui.com/getting-started) for making and styling your own components.
 
+## Writing Posts
+
+To write a new post, create a new `.mdx` file in the `src/markdown/posts` directory.
+
+Update the front-matter for the post with its title, excerpt, cover image and the publication date. The excerpt will appear on the posts listing and can be formatted in markdown. If included, the cover image will be displayed above the excerpt and post content. It will also be the main image that appears when the post is shared on social media.
+
+
 
 
