@@ -4,11 +4,11 @@ import Posts from "../../src/views/Posts"
 import { getAllPosts } from "../../src/api"
 
 const PostsPage = ({ posts, prevPosts, nextPosts, pageIndex, numPages }) => (
-  <Wrapper 
-    url="/" 
-    title={config.title + " | Blog - "+(pageIndex+1)+" of "+numPages} 
-    description={config.description} 
-    imageUrl={config.shareImage} 
+  <Wrapper
+    url="/"
+    title={config.title + " | Blog - " + (pageIndex + 1) + " of " + numPages}
+    description={config.description}
+    imageUrl={config.shareImage}
     imageAlt={config.shareImageAlt}
   >
     <Posts posts={posts} prevPosts={prevPosts} nextPosts={nextPosts} />
@@ -34,7 +34,13 @@ export async function getStaticProps({ params }) {
   const numPages = config.postsPerPage % getAllPosts().length
 
   return {
-    props: { posts: posts.slice(startIndex, endIndex), prevPosts, nextPosts, pageIndex, numPages },
+    props: {
+      posts: posts.slice(startIndex, endIndex),
+      prevPosts,
+      nextPosts,
+      pageIndex,
+      numPages,
+    },
   }
 }
 

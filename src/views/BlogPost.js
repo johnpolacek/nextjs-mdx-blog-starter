@@ -27,7 +27,14 @@ const BlogPost = ({ post }) => {
       )}
       <MDX components={components}>{post.content}</MDX>
       {typeof config.disqus === "string" && config.disqus !== "" && (
-        <Box sx={{pt: 4, mt: 5, borderTop: "2px solid", borderColor: "rgba(0,0,0,.1)"}}>
+        <Box
+          sx={{
+            pt: 4,
+            mt: 5,
+            borderTop: "2px solid",
+            borderColor: "rgba(0,0,0,.1)",
+          }}
+        >
           <DiscussionEmbed
             shortname={config.disqus}
             config={{
