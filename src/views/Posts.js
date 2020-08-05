@@ -42,14 +42,14 @@ const Posts = ({ posts, prevPosts, nextPosts }) => (
     <Flex sx={{ fontStyle: "italic" }}>
       <Box sx={{ width: "50%", py: 3, textAlign: "left" }}>
         {prevPosts !== null && (
-          <Link href={"/posts/" + prevPosts} passHref>
+          <Link href={"/blog/" + prevPosts} passHref>
             <a>« see newer posts</a>
           </Link>
         )}
       </Box>
       <Box sx={{ width: "50%", py: 3, pr: 3, textAlign: "right" }}>
         {nextPosts !== null && (
-          <Link href={"/posts/" + nextPosts} passHref>
+          <Link href={"/blog/" + nextPosts} passHref>
             <a>see older posts »</a>
           </Link>
         )}

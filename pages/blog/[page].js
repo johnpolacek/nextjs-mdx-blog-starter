@@ -6,7 +6,7 @@ import { getAllPosts } from "../../src/api"
 const PostsPage = ({ posts, prevPosts, nextPosts, pageIndex, numPages }) => (
   <Wrapper 
     url="/" 
-    title={config.title + " | Posts "+(pageIndex+1)+" of "+numPages} 
+    title={config.title + " | Blog - "+(pageIndex+1)+" of "+numPages} 
     description={config.description} 
     imageUrl={config.shareImage} 
     imageAlt={config.shareImageAlt}
@@ -25,12 +25,12 @@ export async function getStaticProps({ params }) {
     "excerpt",
   ])
 
-  const pageIndex = parseInt(params.page)
+  const pageIndex = parseInt(params.page) - 1
   const startIndex = pageIndex * config.postsPerPage
   const endIndex = (pageIndex + 1) * config.postsPerPage
 
-  const prevPosts = pageIndex > 0 ? pageIndex - 1 : null
-  const nextPosts = endIndex >= posts.length ? null : pageIndex + 1
+  const prevPosts = pageIndex > 0 ? pageIndex : null
+  const nextPosts = endIndex >= posts.length ? null : pageIndex + 2
   const numPages = config.postsPerPage % getAllPosts().length
 
   return {

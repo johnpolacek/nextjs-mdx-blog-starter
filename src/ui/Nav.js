@@ -11,7 +11,7 @@ const Nav = (props) => {
     >
       <NavLink
         href="/"
-        active={router.pathname === "/" || router.pathname.includes("/posts")}
+        active={router.pathname === "/" || router.pathname.includes("/blog")}
       >
         Blog
       </NavLink>

@@ -22,7 +22,7 @@ export async function getStaticProps() {
   const startIndex = 0
   const endIndex = config.postsPerPage
   const prevPosts = null
-  const nextPosts = endIndex >= posts.length ? null : 1
+  const nextPosts = endIndex >= posts.length ? null : 2
 
   return {
     props: { posts: posts.slice(startIndex, endIndex), prevPosts, nextPosts },
