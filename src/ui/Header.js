@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui"
 import config from "../../blog.config"
 import { MDXProvider } from "@mdx-js/react"
-import Blurb from "../markdown/blurb.mdx"
+import Blurb from "../mdx/blurb.mdx"
 import { Box, Heading } from "theme-ui"
 import Nav from "./Nav"
 import ButtonLink from "../ui/ButtonLink"

@@ -1,6 +1,6 @@
 import { Box } from "theme-ui"
 import { MDXProvider } from "@mdx-js/react"
-import MarkdownContent from "../markdown/about.mdx"
+import MarkdownContent from "../mdx/about.mdx"
 
 const Home = (props) => (
   <MDXProvider>
