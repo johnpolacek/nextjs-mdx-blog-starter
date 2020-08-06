@@ -31,7 +31,8 @@ export async function getStaticProps({ params }) {
 
   const prevPosts = pageIndex > 0 ? pageIndex : null
   const nextPosts = endIndex >= posts.length ? null : pageIndex + 2
-  const numPages = config.postsPerPage % getAllPosts().length
+  const numPages = (config.postsPerPage % getAllPosts().length) + 1
+
 
   return {
     props: {
@@ -45,7 +46,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const numPages = config.postsPerPage % getAllPosts().length
+  const numPages = (config.postsPerPage % getAllPosts().length) + 1
 
   return {
     paths: [...Array(numPages)].map((v, i) => {
