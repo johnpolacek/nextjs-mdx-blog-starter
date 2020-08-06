@@ -1,7 +1,7 @@
 import MDX from "@mdx-js/runtime"
 import config from "../../blog.config"
 import { DiscussionEmbed } from "disqus-react"
-import { Box, Heading, Image } from "theme-ui"
+import { Box, Text, Heading, Image } from "theme-ui"
 import Link from "next/link"
 
 const BlogPost = ({ post }) => {
@@ -11,9 +11,15 @@ const BlogPost = ({ post }) => {
 
   return (
     <Box sx={{ maxWidth: "800px", mx: "auto", px: [3, 4, 5], py: 5 }}>
-      <Heading as="h1" sx={{ pb: [3, 4], fontSize: [5, 6] }}>
-        {post.title}
-      </Heading>
+      <Box sx={{pb: [3, 4]}}>
+        <Heading as="h1" sx={{ fontSize: [5, 6] }}>
+          {post.title}
+        </Heading>
+        {
+          config.showDate && 
+          <Text sx={{fontStyle: "italic"}}>Originally published on {new Date(post.date).toLocaleDateString()}</Text>
+        }
+      </Box>
       {post.coverImage && (
         <Image
           sx={{
