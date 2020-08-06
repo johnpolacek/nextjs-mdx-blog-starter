@@ -50,7 +50,7 @@ export async function getStaticPaths() {
   return {
     paths: [...Array(numPages)].map((v, i) => {
       return {
-        params: { page: i.toString() },
+        params: { page: (i+1).toString() },
       }
     }),
     fallback: false,
