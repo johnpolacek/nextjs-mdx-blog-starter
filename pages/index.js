@@ -22,6 +22,7 @@ export async function getStaticProps() {
     "slug",
     "author",
     "coverImage",
+    "coverImageAlt",
     "excerpt",
   ])
 
