@@ -33,7 +33,6 @@ export async function getStaticProps({ params }) {
   const nextPosts = endIndex >= posts.length ? null : pageIndex + 2
   const numPages = (config.postsPerPage % getAllPosts().length) + 1
 
-
   return {
     props: {
       posts: posts.slice(startIndex, endIndex),
@@ -51,7 +50,7 @@ export async function getStaticPaths() {
   return {
     paths: [...Array(numPages)].map((v, i) => {
       return {
-        params: { page: (i+1).toString() },
+        params: { page: (i + 1).toString() },
       }
     }),
     fallback: false,
