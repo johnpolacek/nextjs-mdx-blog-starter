@@ -1,4 +1,4 @@
-import { Box, Link } from 'theme-ui'
+import { Box, Link, Image } from 'theme-ui'
 
 Created by **[John Polacek](https://johnpolacek.com)**, a web developer from Chicago. **Follow me at [@johnpolacek](https://twitter.com/johnpolacek)**
 
@@ -8,6 +8,7 @@ Created by **[John Polacek](https://johnpolacek.com)**, a web developer from Chi
       bg: "primary",
       px: 4,
       py: 3,
+      mx: 3, 
       color: "white",
       textDecoration: "none",
       fontSize: 3,
@@ -17,4 +18,21 @@ Created by **[John Polacek](https://johnpolacek.com)**, a web developer from Chi
   >
     View on Github
   </Link>
+  <Link
+    sx={{
+      bg: "secondary",
+      px: 4,
+      py: 3,
+      mx: 3, 
+      color: "white",
+      textDecoration: "none",
+      fontSize: 3,
+      borderRadius: "4px",
+    }}
+    download
+    href="https://github.com/johnpolacek/nextjs-mdx-blog-starter/archive/main.zip"
+  >
+    <Image sx={{position:"relative", top:"2px", left: "-8px"}} src="/download.svg" alt="" />Download
+  </Link>
+  
 </Box>
