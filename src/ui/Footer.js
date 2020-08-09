@@ -5,7 +5,7 @@ const Footer = (props) => (
     as="footer"
     sx={{
       p: 4,
-      color: "#888",
+      color: "#777",
       textAlign: "center",
       fontSize: 1,
     }}
