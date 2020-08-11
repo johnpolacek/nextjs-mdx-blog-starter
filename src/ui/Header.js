@@ -10,10 +10,10 @@ import ButtonLink from "../ui/ButtonLink"
 const Header = (props) => (
   <MDXProvider>
     <Box as="header" sx={{ textAlign: "center", pt: 4 }}>
-      <Heading sx={{ fontSize: 6, pb: 2 }} as="h1">
+      <Heading sx={{ fontSize: 6, pb: 2, px: 3 }} as="h1">
         {config.title}
       </Heading>
-      <Heading sx={{ pb: 3 }}>{config.subtitle}</Heading>
+      <Heading sx={{ pb: 3, px: [3, 4] }}>{config.subtitle}</Heading>
       <Box sx={{ pb: 3 }}>
         <Blurb />
       </Box>
