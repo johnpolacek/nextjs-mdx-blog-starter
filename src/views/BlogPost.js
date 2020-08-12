@@ -3,10 +3,14 @@ import config from "../../blog.config"
 import { DiscussionEmbed } from "disqus-react"
 import { Box, Text, Heading, Image } from "theme-ui"
 import Link from "next/link"
+import CodeBlock from "../ui/CodeBlock"
 
 const BlogPost = ({ post }) => {
+
   const components = {
     Box: (props) => <Box {...props} />,
+    pre: props => <div {...props} />,
+    code: CodeBlock,
   }
 
   return (

@@ -32,26 +32,15 @@ const Style = (props) => (
       box-sizing: content-box;
       height: 0;
     }
-    code,
     kbd,
-    pre,
     samp {
       font-family: monospace, monospace;
       font-size: 14px;
     }
     pre {
-      padding: 16px 32px 16px 16px;
-      margin: 0 0 32px 0;
-      background: #f4f4f4;
-      display: inline-block;
-    }
-    pre code {
-      padding: 0;
-      background: none;
-    }
-    code {
-      background: #f4f4f4;
-      padding: 4px 6px;
+      width: 100%;
+      overflow-x: scroll;
+      margin-bottom: 24px;
     }
     a {
       background-color: transparent;
