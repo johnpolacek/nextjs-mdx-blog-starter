@@ -1,6 +1,6 @@
-import { Box } from "theme-ui"
 import { MDXProvider } from "@mdx-js/react"
 import MarkdownContent from "../mdx/about.mdx"
+import Container from "../ui/Container"
 
 const About = (props) => {
   const components = {
@@ -8,8 +8,7 @@ const About = (props) => {
   }
   return (
     <MDXProvider components={components}>
-      <Box
-        id="about"
+      <Container
         sx={{
           p: [3, 4, 5],
           maxWidth: "800px",
@@ -17,7 +16,7 @@ const About = (props) => {
         }}
       >
         <MarkdownContent />
-      </Box>
+      </Container>
     </MDXProvider>
   )
 }

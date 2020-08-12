@@ -16,15 +16,21 @@ npm install && vercel deploy
 
 You can set properties like your blog title, description, Google Analytics code, social media sharing image and more by editing `blog.config.js`
 
-Content for the about page and the blurb in the header are written in markdown/mdx. You can find markdown content and blog post files in `src/markdown`.
+Content for the about page, footer and blurb in the header are written in markdown/mdx. Find markdown content and blog post files in `src/markdown`.
 
-To edit the styling of the site, you can make changes to the theme file at `src/layout/Theme.js`. To further customize the site, refer to the [Theme UI documentation](https://theme-ui.com/getting-started) for making and styling your own components.
+If you would like to add more data to your posts, such as author information or other meta data, simple add more fields to the [front matter](https://jekyllrb.com/docs/front-matter/) in your mdx files and add the field names to the `getStaticProps` function for the various pages that display posts. See also the official [Next.js Blog Starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) which served as the basis for this project.
+
+To edit the styling of the site, you can make changes to the theme file at `src/layout/Theme.js`. Of course, you can change or add to the existing components in `src/components/ui` or edit or create new pages in `src/pages` and `src/components/views`.
+
+To further customize the site, refer to the [Theme UI documentation](https://theme-ui.com/getting-started) for making and styling your own components.
 
 ## Writing Posts
 
 To write a new post, create a new `.mdx` file in the `src/markdown/posts` directory.
 
 Update the front-matter for the post with its title, excerpt, cover image and the publication date. 
+
+You can mark a post as a draft by adding `draft: true` to the front matter of the post and then it will only display in the local dev environment.
 
 #### Title
 

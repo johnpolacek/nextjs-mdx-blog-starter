@@ -24,6 +24,7 @@ export async function getStaticProps() {
     "coverImage",
     "coverImageAlt",
     "excerpt",
+    "draft",
   ])
 
   const startIndex = 0
