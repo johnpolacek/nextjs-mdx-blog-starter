@@ -30,6 +30,8 @@ const Posts = ({ posts, prevPosts, nextPosts }) => {
                     border: "1px solid",
                     borderColor: "rgba(0,0,0,.1)",
                   }}
+                  height={post.coverImageHeight}
+                  width={post.coverImageWidth}
                   src={post.coverImage}
                   alt={post.coverImageAlt || ""}
                 />

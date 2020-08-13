@@ -23,6 +23,8 @@ export async function getStaticProps() {
     "author",
     "coverImage",
     "coverImageAlt",
+    "coverImageHeight",
+    "coverImageWidth",
     "excerpt",
     "draft",
   ])

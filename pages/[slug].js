@@ -25,6 +25,8 @@ export async function getStaticProps({ params }) {
     "content",
     "coverImage",
     "coverImageAlt",
+    "coverImageHeight",
+    "coverImageWidth",
     "draft",
   ])
 
