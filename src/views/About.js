@@ -9,13 +9,7 @@ const About = (props) => {
   }
   return (
     <MDXProvider components={components}>
-      <Container
-        sx={{
-          p: [3, 4, 5],
-          maxWidth: "800px",
-          mx: "auto",
-        }}
-      >
+      <Container>
         <MarkdownContent />
       </Container>
     </MDXProvider>
