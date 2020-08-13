@@ -30,5 +30,5 @@
     "prettier": "^2.0.5"
   },
   "repository": "https://github.com/johnpolacek/nextjs-mdx-blog-starter",
-  "license": "MIT-0"
+  "license": "MIT"
 }
