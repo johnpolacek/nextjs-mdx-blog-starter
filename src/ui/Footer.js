@@ -1,10 +1,7 @@
-import { Box } from "theme-ui"
-import { MDXProvider } from "@mdx-js/react"
-import FooterContent from "../mdx/footer.mdx"
+import { Box, Text } from "theme-ui"
 
 const Footer = (props) => (
   <Box
-    as="footer"
     sx={{
       p: 4,
       color: "#666",
@@ -12,7 +9,18 @@ const Footer = (props) => (
       fontSize: 1,
     }}
   >
-    <FooterContent />
+    <Text sx={{ mx: 3, display: "inline-block" }}>
+      Created by <a href="https://johnpolacek">John Polacek</a>
+    </Text>
+    <Text sx={{ mx: 3, display: "inline-block" }}>
+      Open sourced on{" "}
+      <a href="https://github.com/johnpolacek/nextjs-mdx-blog-starter">
+        Github
+      </a>
+    </Text>
+    <Text sx={{ mx: 3, display: "inline-block" }}>
+      Follow <a href="https://twitter.com/johnpolacek">@johnpolacek</a>
+    </Text>
   </Box>
 )
 
