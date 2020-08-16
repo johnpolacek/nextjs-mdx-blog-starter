@@ -1,5 +1,4 @@
 import { Box } from "theme-ui"
-import React, { useContext } from "react"
 
 const Main = (props) => {
   return (
