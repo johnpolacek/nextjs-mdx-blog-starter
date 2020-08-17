@@ -2,6 +2,7 @@ import { Box } from "theme-ui"
 import PropTypes from "prop-types"
 import Head from "./Head"
 import Style from "./Style"
+import ThemeToggle from "../ui/ThemeToggle"
 import Header from "../ui/Header"
 import Main from "../ui/Main"
 import Footer from "../ui/Footer"
@@ -9,7 +10,7 @@ import Footer from "../ui/Footer"
 const Layout = (props) => (
   <>
     <Head {...props} />
-
+    <script dangerouslySetInnerHTML={{ __html: `console.log("hi")` }} />
     <Box
       sx={{
         display: "flex",
@@ -17,6 +18,7 @@ const Layout = (props) => (
         flexDirection: "column",
       }}
     >
+      <ThemeToggle />
       <Header />
       <Main>{props.children}</Main>
       <Footer />

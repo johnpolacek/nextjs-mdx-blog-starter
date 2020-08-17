@@ -29,6 +29,15 @@ export default {
     red: "#ee5555",
     white: "#fff",
     yellow: "#FFDD22",
+    lite: "#eee",
+    modes: {
+      dark: {
+        text: "#fff",
+        background: "#000",
+        lite: "#333",
+        gray: "#666",
+      },
+    },
   },
   space: [0, 4, 8, 16, 32, 64, 128],
   breakpoints: ["32em", "48em", "64em", "80em"],

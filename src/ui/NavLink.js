@@ -13,7 +13,7 @@ const NavLink = ({ href, active, children }) => (
         display: "inline-block",
         textDecoration: "none",
         borderBottom: "1px solid",
-        borderColor: active ? "primary" : "white",
+        borderColor: active ? "primary" : "background",
         cursor: "pointer",
         transition: "border-color .5s",
         "&:hover": {
