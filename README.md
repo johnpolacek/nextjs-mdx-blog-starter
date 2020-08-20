@@ -20,7 +20,9 @@ Content for the about page, footer and blurb in the header are written in markdo
 
 If you would like to add more data to your posts, such as author information or other meta data, simple add more fields to the [front matter](https://jekyllrb.com/docs/front-matter/) in your mdx files and add the field names to the `getStaticProps` function for the various pages that display posts. See also the official [Next.js Blog Starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) which served as the basis for this project.
 
-To edit the styling of the site, you can make changes to the theme file at `src/layout/Theme.js`. Of course, you can change or add to the existing components in `src/components/ui` or edit or create new pages in `src/pages` and `src/components/views`.
+To edit the styling of the site, such as colors, typography and spacing, you can make changes to the theme file at `src/layout/Theme.js`. It is also there you can define styles for dark mode, or remove it.
+
+Of course, you can change or add to the existing components in `src/components/ui` or edit or create new pages in `src/pages` and `src/components/views`. 
 
 To further customize the site, refer to the [Theme UI documentation](https://theme-ui.com/getting-started) for making and styling your own components.
 
