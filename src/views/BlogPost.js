@@ -62,6 +62,7 @@ const BlogPost = ({ post }) => {
                 borderTop: "2px solid",
                 borderColor: "rgba(0,0,0,.1)",
                 bg: "#eee",
+                borderRadius: "8px",
               }}
             >
               <DiscussionEmbed
