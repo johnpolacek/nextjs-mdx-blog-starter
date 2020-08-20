@@ -10,27 +10,29 @@ import Main from "../ui/Main"
 import Footer from "../ui/Footer"
 
 // inject inline styles on the body before the page is rendered to avoid the flash of light if we are in dark mode
-const codeToRunOnClient = `
-(function() {
-  const theme = ${JSON.stringify(theme)}
+let codeToRunOnClient = false
+if (theme.colors.modes && theme.colors.modes.length !== 0) {
+  codeToRunOnClient = `
+  (function() {
+    const theme = ${JSON.stringify(theme)}
 
-  let mode = localStorage.getItem("theme-ui-color-mode")
-  console.log("mode", mode)
+    let mode = localStorage.getItem("theme-ui-color-mode")
 
-  if (!mode) {
-    const mql = window.matchMedia('(prefers-color-scheme: dark)')
-    if (typeof mql.matches === 'boolean' && mql.matches) {
-      mode = "dark"
+    if (!mode) {
+      const mql = window.matchMedia('(prefers-color-scheme: dark)')
+      if (typeof mql.matches === 'boolean' && mql.matches) {
+        mode = "dark"
+      }
     }
-  }
 
-  if (mode && typeof theme.colors.modes[mode] === "object") {
-    const root = document.documentElement
-    Object.keys(theme.colors.modes[mode]).forEach((colorName) => {
-      document.body.style.setProperty("--theme-ui-colors-"+colorName, "var(--theme-ui-colors-primary,"+theme.colors.modes[mode][colorName]+")")
-    })
-  }
-})()`
+    if (mode && typeof theme.colors.modes === "object") {
+      const root = document.documentElement
+      Object.keys(theme.colors.modes[mode]).forEach((colorName) => {
+        document.body.style.setProperty("--theme-ui-colors-"+colorName, "var(--theme-ui-colors-primary,"+theme.colors.modes[mode][colorName]+")")
+      })
+    }
+  })()`
+}
 
 const Layout = (props) => {
   useEffect(() => {
@@ -41,7 +43,10 @@ const Layout = (props) => {
   return (
     <>
       <Head {...props} />
-      <script dangerouslySetInnerHTML={{ __html: codeToRunOnClient }} />
+      {
+        codeToRunOnClient && 
+        <script dangerouslySetInnerHTML={{ __html: codeToRunOnClient }} />
+      }
       <Box
         sx={{
           display: "flex",
@@ -49,7 +54,10 @@ const Layout = (props) => {
           flexDirection: "column",
         }}
       >
-        <ThemeToggle />
+        {
+          typeof theme.colors.modes === "object" && 
+          <ThemeToggle />
+        }
         <Header />
         <Main>{props.children}</Main>
         <Footer />
