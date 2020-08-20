@@ -57,10 +57,11 @@ const BlogPost = ({ post }) => {
           {typeof config.disqus === "string" && config.disqus !== "" && (
             <Box
               sx={{
-                pt: 4,
+                p: 4,
                 mt: 5,
                 borderTop: "2px solid",
                 borderColor: "rgba(0,0,0,.1)",
+                bg: "#eee",
               }}
             >
               <DiscussionEmbed
