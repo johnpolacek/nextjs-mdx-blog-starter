@@ -209,10 +209,6 @@ const Style = (props) => (
     a {
       color: ${theme.colors.primary};
     }
-
-    #docs h2 {
-      padding-top: 32px;
-    }
   `}</style>
 )
 
