@@ -11,23 +11,23 @@
     "deploy": "git push origin main && vercel --prod"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.28",
-    "@mdx-js/loader": "^1.6.16",
-    "@mdx-js/runtime": "^1.6.16",
-    "@next/mdx": "^9.5.1",
-    "disqus-react": "^1.0.9",
+    "@emotion/core": "^10.1.1",
+    "@mdx-js/loader": "^1.6.22",
+    "@mdx-js/runtime": "^1.6.22",
+    "@next/mdx": "^9.5.5",
+    "disqus-react": "^1.0.10",
     "gray-matter": "^4.0.2",
-    "next": "^9.5.1",
+    "next": "^9.5.5",
     "prism-react-renderer": "^1.1.1",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-ga": "^3.1.2",
-    "theme-ui": "^0.3.1"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-ga": "^3.3.0",
+    "theme-ui": "^0.3.4"
   },
   "devDependencies": {
-    "onchange": "^7.0.2",
-    "prettier": "^2.0.5"
+    "onchange": "^7.1.0",
+    "prettier": "^2.2.1"
   },
   "repository": "https://github.com/johnpolacek/nextjs-mdx-blog-starter",
   "license": "MIT"

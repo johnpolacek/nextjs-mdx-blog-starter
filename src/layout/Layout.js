@@ -25,7 +25,7 @@ if (theme.colors.modes && theme.colors.modes.length !== 0) {
       }
     }
 
-    if (mode && typeof theme.colors.modes === "object") {
+    if (mode && typeof theme.colors.modes === "object" && typeof theme.colors.modes[mode] === "object") {
       const root = document.documentElement
       Object.keys(theme.colors.modes[mode]).forEach((colorName) => {
         document.body.style.setProperty("--theme-ui-colors-"+colorName, "var(--theme-ui-colors-primary,"+theme.colors.modes[mode][colorName]+")")
