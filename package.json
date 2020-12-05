@@ -1,7 +1,7 @@
 {
   "name": "nextjs-mdx-blog-starter",
   "description": "Starter for creating a Next.js powered blog with content authored in MDX.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "scripts": {
     "dev": "next",
     "build": "next build",
