@@ -1,10 +1,9 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+import { Link as A } from "theme-ui"
 import Link from "next/link"
 
 const NavLink = ({ href, active, children }) => (
   <Link href={href}>
-    <a
+    <A
       sx={{
         py: [2, 3],
         px: [3, 4],
@@ -22,7 +21,7 @@ const NavLink = ({ href, active, children }) => (
       }}
     >
       {children}
-    </a>
+    </A>
   </Link>
 )
 

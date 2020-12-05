@@ -1,5 +1,6 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx } from "@emotion/react"
 import theme from "./Theme"
 
 const Style = (props) => (

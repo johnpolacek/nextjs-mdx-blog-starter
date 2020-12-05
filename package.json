@@ -11,17 +11,17 @@
     "deploy": "git push origin main && vercel --prod"
   },
   "dependencies": {
-    "@emotion/core": "^10.1.1",
+    "@emotion/react": "^11.1.1",
     "@mdx-js/loader": "^1.6.22",
     "@mdx-js/runtime": "^1.6.22",
-    "@next/mdx": "^9.5.5",
+    "@next/mdx": "^10.0.3",
     "disqus-react": "^1.0.10",
     "gray-matter": "^4.0.2",
-    "next": "^9.5.5",
+    "next": "^10.0.3",
     "prism-react-renderer": "^1.1.1",
     "prop-types": "^15.7.2",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-ga": "^3.3.0",
     "theme-ui": "^0.3.4"
   },

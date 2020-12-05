@@ -1,8 +1,7 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+import { Button as Btn } from "theme-ui"
 
-export default (props) => (
-  <button
+const Button = (props) => (
+  <Btn
     disabled={props.disabled}
     sx={{
       fontSize: 3,
@@ -18,3 +17,5 @@ export default (props) => (
     {...props}
   />
 )
+
+export default Button

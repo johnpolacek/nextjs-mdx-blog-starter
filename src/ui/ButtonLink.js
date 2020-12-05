@@ -1,11 +1,10 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
 import PropTypes from "prop-types"
-import Link from "next/link"
+import Link as NextLink from "next/link"
+import { Link } from "theme-ui"
 
 const ButtonLink = (props) => (
-  <Link as={props.as || props.href} href={props.href}>
-    <a
+  <NextLink as={props.as || props.href} href={props.href}>
+    <Link
       disabled={props.disabled}
       sx={{
         textDecoration: "none",
@@ -22,7 +21,7 @@ const ButtonLink = (props) => (
       }}
       {...props}
     />
-  </Link>
+  </NextLink>
 )
 
 ButtonLink.propTypes = {
