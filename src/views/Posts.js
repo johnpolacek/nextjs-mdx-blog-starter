@@ -1,5 +1,6 @@
 import MDX from "@mdx-js/runtime"
-import { Flex, Box, Heading, Text, Image } from "theme-ui"
+import { Flex, Box, Heading, Text } from "theme-ui"
+import Image from "next/image"
 import Container from "../ui/Container"
 import DraftBadge from "../ui/DraftBadge"
 import Link from "next/link"
@@ -23,18 +24,21 @@ const Posts = ({ posts, prevPosts, nextPosts }) => {
                 </Link>
               </Heading>
               {post.coverImage && (
-                <Image
+                <Box
                   sx={{
                     mt: 2,
                     mb: 3,
                     border: "1px solid",
                     borderColor: "rgba(0,0,0,.1)",
                   }}
-                  height={post.coverImageHeight}
-                  width={post.coverImageWidth}
-                  src={post.coverImage}
-                  alt={post.coverImageAlt || ""}
-                />
+                >
+                  <Image
+                    height={post.coverImageHeight}
+                    width={post.coverImageWidth}
+                    src={post.coverImage}
+                    alt={post.coverImageAlt || ""}
+                  />
+                </Box>
               )}
               <Box sx={{ pb: 3 }}>
                 <MDX>{post.excerpt}</MDX>

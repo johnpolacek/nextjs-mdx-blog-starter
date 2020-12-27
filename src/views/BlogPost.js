@@ -1,8 +1,9 @@
 import MDX from "@mdx-js/runtime"
 import config from "../../blog.config"
 import { DiscussionEmbed } from "disqus-react"
-import { Box, Text, Heading, Image } from "theme-ui"
+import { Box, Text, Heading } from "theme-ui"
 import Link from "next/link"
+import Image from "next/image"
 import Container from "../ui/Container"
 import CodeBlock from "../ui/CodeBlock"
 import DraftBadge from "../ui/DraftBadge"
@@ -41,17 +42,20 @@ const BlogPost = ({ post }) => {
             )}
           </Box>
           {post.coverImage && (
-            <Image
+            <Box
               sx={{
                 mb: 3,
                 border: "1px solid",
                 borderColor: "rgba(0,0,0,.1)",
               }}
-              height={post.coverImageHeight}
-              width={post.coverImageWidth}
-              src={post.coverImage}
-              alt={post.coverImageAlt || ""}
-            />
+            >
+              <Image
+                height={post.coverImageHeight}
+                width={post.coverImageWidth}
+                src={post.coverImage}
+                alt={post.coverImageAlt || ""}
+              />
+            </Box>
           )}
           <MDX components={components}>{post.content}</MDX>
           {typeof config.disqus === "string" && config.disqus !== "" && (
