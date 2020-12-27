@@ -5,7 +5,7 @@ import { getAllPosts } from "../../src/api"
 
 const PostsPage = ({ posts, prevPosts, nextPosts, pageIndex, numPages }) => (
   <Wrapper
-    url="/"
+    url={config.url + "blog/" + (pageIndex + 1)}
     title={config.title + " | Blog - " + (pageIndex + 1) + " of " + numPages}
     description={config.description}
     imageUrl={config.shareImage}

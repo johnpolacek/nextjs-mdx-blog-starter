@@ -5,7 +5,7 @@ import { getPostBySlug, getAllPosts } from "../src/api"
 
 const PostPage = ({ post }) => (
   <Wrapper
-    url="/"
+    url={config.url + post.slug}
     title={config.title + " | " + post.title}
     description={post.excerpt}
     imageUrl={config.url + post.coverImage}
