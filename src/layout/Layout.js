@@ -43,10 +43,9 @@ const Layout = (props) => {
   return (
     <>
       <Head {...props} />
-      {
-        codeToRunOnClient && 
+      {codeToRunOnClient && (
         <script dangerouslySetInnerHTML={{ __html: codeToRunOnClient }} />
-      }
+      )}
       <Box
         sx={{
           display: "flex",
@@ -54,10 +53,7 @@ const Layout = (props) => {
           flexDirection: "column",
         }}
       >
-        {
-          typeof theme.colors.modes === "object" && 
-          <ThemeToggle />
-        }
+        {typeof theme.colors.modes === "object" && <ThemeToggle />}
         <Header />
         <Main>{props.children}</Main>
         <Footer />
