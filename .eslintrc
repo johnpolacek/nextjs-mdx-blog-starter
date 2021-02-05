@@ -1,10 +1,9 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["testcafe", "@typescript-eslint"],
+  "plugins": ["@typescript-eslint"],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:testcafe/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier"
   ],

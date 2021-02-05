@@ -1,14 +1,22 @@
 {
-  "name": "nextjs-mdx-blog-starter",
-  "description": "Starter for creating a Next.js powered blog with content authored in MDX.",
-  "version": "0.2.3",
+  "name": "erik-online",
+  "description": "A new kind of website for the post-covid era",
+  "version": "0.0.1",
+  "repository": "https://github.com/johnpolacek/nextjs-mdx-blog-starter",
+  "license": "MIT",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "ci": "yarn test && yarn type-check && yarn lint",
+    "deploy": "git push origin main && vercel --prod",
+    "dev:debug": "node --inspect-brk --no-lazy node_modules/.bin/next dev",
     "format-watch": "npm run format && onchange \"**/*.{js,jsx,json,md}\" -- prettier --write {{changed}}",
-    "deploy": "git push origin main && vercel --prod"
+    "lint": "eslint . --ext ts --ext tsx --ext js",
+    "static:serve": "npx serve out",
+    "test": "echo 'Test: not implemented'",
+    "type-check": "tsc --pretty --noEmit"
   },
   "dependencies": {
     "@artsy/fresnel": "^1.3.1",
@@ -21,6 +29,8 @@
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-react": "^7.22.0",
     "gray-matter": "^4.0.2",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.3",
     "next": "^10.0.5",
     "prism-react-renderer": "^1.1.1",
     "prop-types": "^15.7.2",
@@ -35,9 +45,21 @@
     "@types/react": "^17.0.1",
     "@types/react-dom": "^17.0.0",
     "@types/theme-ui": "^0.3.7",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "@typescript-eslint/parser": "^4.14.2",
     "onchange": "^7.1.0",
     "prettier": "^2.2.1"
   },
-  "repository": "https://github.com/johnpolacek/nextjs-mdx-blog-starter",
-  "license": "MIT"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run type-check"
+    }
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
+  }
 }
