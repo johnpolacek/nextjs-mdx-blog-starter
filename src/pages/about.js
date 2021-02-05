@@ -1,6 +1,6 @@
-import Wrapper from "../src/layout/Wrapper"
-import About from "../src/views/About"
-import config from "../blog.config.js"
+import Wrapper from "../layout/Wrapper"
+import About from "../views/About"
+import config from "../../blog.config.js"
 
 const AboutPage = () => (
   <Wrapper

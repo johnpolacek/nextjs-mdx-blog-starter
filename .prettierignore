@@ -1,9 +1,4 @@
-.cache
 .next
 package.json
-package-lock.json
+yarn.lock
 public
-api/socks.js
-node-modules
-*.md
-*.mdx

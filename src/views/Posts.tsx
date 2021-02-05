@@ -4,8 +4,26 @@ import Image from "next/image"
 import Container from "../ui/Container"
 import DraftBadge from "../ui/DraftBadge"
 import Link from "next/link"
+import React from 'react'
 
-const Posts = ({ posts, prevPosts, nextPosts }) => {
+export interface Post {
+  draft?: boolean
+  slug: string
+  title: string
+  excerpt: string
+  coverImage?: string
+  coverImageHeight?: number 
+  coverImageWidth?: number 
+  coverImageAlt?: string 
+}
+
+interface Props {
+  posts: Post[]
+  prevPosts: Post[]
+  nextPosts: Post[]
+}
+
+const Posts: (props: Props) => JSX.Element = ({ posts, prevPosts, nextPosts }) => {
   const isLocal = process.env.NODE_ENV === "development"
 
   return (
