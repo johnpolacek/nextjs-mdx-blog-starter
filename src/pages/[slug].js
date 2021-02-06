@@ -1,7 +1,7 @@
-import Wrapper from "../src/layout/Wrapper"
-import BlogPost from "../src/views/BlogPost"
-import config from "../blog.config.js"
-import { getPostBySlug, getAllPosts } from "../src/api"
+import Wrapper from "../layout/Wrapper"
+import BlogPost from "../views/BlogPost"
+import config from "../../blog.config.js"
+import { getPostBySlug, getAllPosts } from "../api"
 
 const PostPage = ({ post }) => (
   <Wrapper
