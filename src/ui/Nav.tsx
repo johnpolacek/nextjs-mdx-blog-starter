@@ -2,7 +2,7 @@ import { useRouter } from "next/router"
 import { Box } from "theme-ui"
 import NavLink from "ui/NavLink"
 
-const Nav = (props) => {
+const Nav: React.FC = () => {
   const router = useRouter()
   return (
     <Box

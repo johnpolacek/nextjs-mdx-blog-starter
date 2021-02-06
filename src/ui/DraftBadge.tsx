@@ -1,6 +1,6 @@
 import { Text } from "theme-ui"
 
-const DraftBadge = (props) => (
+const DraftBadge: React.FC = () => (
   <Text
     as="span"
     sx={{

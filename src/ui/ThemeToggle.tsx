@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { Box, useColorMode } from "theme-ui"
 import Button from "./Button"
 
-const ThemeToggle = (props) => {
+const ThemeToggle: React.FC = () => {
   const [colorMode, setColorMode] = useColorMode()
   const [opacity, setOpacity] = useState(0)
 
@@ -24,7 +24,7 @@ const ThemeToggle = (props) => {
     >
       <Button
         sx={{ bg: "gray", py: 1, px: 2, fontSize: 0 }}
-        onClick={(e) => {
+        onClick={(_e) => {
           setColorMode(colorMode === "default" ? "dark" : "default")
         }}
       >

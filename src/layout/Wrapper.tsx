@@ -1,6 +1,4 @@
-import { ThemeProvider } from "theme-ui"
-import Layout from "./Layout"
-import Theme from "./Theme"
+import { Layout } from "./Layout"
 import config from "../../blog.config"
 import ReactGA from "react-ga"
 
@@ -13,11 +11,7 @@ const Wrapper = (props) => {
     }
   }
 
-  return (
-    <ThemeProvider theme={Theme}>
-      <Layout {...props} />
-    </ThemeProvider>
-  )
+  return <Layout {...props} />
 }
 
 export default Wrapper

@@ -2,8 +2,10 @@ import Wrapper from "../layout/Wrapper"
 import BlogPost from "../views/BlogPost"
 import config from "../../blog.config.js"
 import { getPostBySlug, getAllPosts } from "../api"
+import { NextPage } from "next"
+import { Post } from "views/Posts"
 
-const PostPage = ({ post }) => (
+const PostPage: NextPage<{ post: Post }> = ({ post }) => (
   <Wrapper
     url={config.url + post.slug}
     title={config.title + " | " + post.title}
@@ -39,9 +41,9 @@ export async function getStaticPaths() {
   const posts = getAllPosts(["slug"])
 
   return {
-    paths: posts.map((post) => {
+    paths: posts.map(({ slug }) => {
       return {
-        params: { ...post },
+        params: { slug },
       }
     }),
     fallback: false,

@@ -1,6 +1,6 @@
 import { Box } from "theme-ui"
 
-const Main = (props) => {
+const Main: React.FC = (props) => {
   return (
     <Box
       as="main"

@@ -1,7 +1,11 @@
 import { Link as A } from "theme-ui"
 import Link from "next/link"
 
-const NavLink = ({ href, active, children }) => (
+interface Props {
+  href: string
+  active?: boolean
+}
+const NavLink: React.FC<Props> = ({ href, active, children }) => (
   <Link href={href}>
     <A
       sx={{

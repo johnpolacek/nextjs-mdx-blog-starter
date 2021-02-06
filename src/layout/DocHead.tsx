@@ -1,8 +1,7 @@
 import Head from "next/head"
-import PropTypes from "prop-types"
 import config from "../../blog.config"
 
-interface Props {
+export interface Props {
   title: string
   description: string
   url: string

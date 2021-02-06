@@ -1,11 +1,11 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Themed } from "theme-ui"
 import MDX from "@mdx-js/runtime"
 import { Flex, Box, Heading } from "theme-ui"
 import Container from "../ui/Container"
 import DraftBadge from "../ui/DraftBadge"
-import Link from "next/link"
+import { Link } from "ui/Link"
 
 export interface Post {
   draft?: boolean
@@ -45,10 +45,8 @@ const Posts: (props: Props) => JSX.Element = ({
             return (
               <Box sx={{ pb: 5 }} key={post.slug}>
                 <Heading sx={{ pb: 2, position: "relative" }}>
-                  {post.draft && <DraftBadge />}
-                  <Link href={"/" + post.slug} passHref>
-                    <a>{post.title}</a>
-                  </Link>
+                  {post.draft && <DraftBadge />} TEST test hey
+                  <Link href={"/" + post.slug}>{post.title}</Link>
                 </Heading>
                 {coverImage && (
                   <Box

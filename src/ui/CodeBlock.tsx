@@ -1,9 +1,14 @@
 import React from "react"
-import Highlight, { defaultProps } from "prism-react-renderer"
+import Highlight, { defaultProps, Language } from "prism-react-renderer"
 import github from "prism-react-renderer/themes/github"
 
-const CodeBlock = ({ children, className }) => {
-  const language = className ? className.replace(/language-/, "") : "javascript"
+const CodeBlock: React.FC<{ className?: string; children: any }> = ({
+  children,
+  className,
+}) => {
+  const language: Language = (className
+    ? className.replace(/language-/, "")
+    : "javascript") as Language
   return (
     <Highlight
       {...defaultProps}

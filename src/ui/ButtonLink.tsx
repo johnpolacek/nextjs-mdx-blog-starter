@@ -2,8 +2,8 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import React from "react"
-import PropTypes from "prop-types"
 import Link from "next/link"
+import { Link as TUILink } from "theme-ui"
 
 const A = React.forwardRef(({ onClick, href, styles, children }, ref) => {
   return (
@@ -36,12 +36,12 @@ const ButtonLink = (props) => {
     display: "inline-block",
   }
   return props.href.includes("http") ? (
-    <A href={props.href} styles={styles}>
+    <TUILink href={props.href} sx={styles}>
       {props.children}
-    </A>
+    </TUILink>
   ) : (
     <Link href={props.href} passHref>
-      <A styles={styles}>{props.children}</A>
+      <TUILink sx={styles}>{props.children}</TUILink>
     </Link>
   )
 }
