@@ -1,9 +1,24 @@
-import config from "../../blog.config"
-import Wrapper from "../../src/layout/Wrapper"
-import Posts from "../../src/views/Posts"
-import { getAllPosts } from "../../src/api"
+import config from "../../../blog.config"
+import Wrapper from "../../layout/Wrapper"
+import Posts, { Post } from "../../views/Posts"
+import { getAllPosts } from "../../api"
+import { NextPage } from "next"
 
-const PostsPage = ({ posts, prevPosts, nextPosts, pageIndex, numPages }) => (
+interface Props {
+  posts: Post[]
+  prevPosts: Post[]
+  nextPosts: Post[]
+  pageIndex: number
+  numPages: number
+}
+
+const PostsPage: NextPage<Props> = ({
+  posts,
+  prevPosts,
+  nextPosts,
+  pageIndex,
+  numPages,
+}) => (
   <Wrapper
     url={config.url + "blog/" + (pageIndex + 1)}
     title={config.title + " | Blog - " + (pageIndex + 1) + " of " + numPages}
