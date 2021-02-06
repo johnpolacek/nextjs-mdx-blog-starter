@@ -9,6 +9,7 @@ import Link from "next/link"
 
 export interface Post {
   draft?: boolean
+  date: string
   slug: string
   title: string
   excerpt: string
@@ -40,9 +41,7 @@ const Posts: (props: Props) => JSX.Element = ({
           })
           .map((post) => {
             const { coverImage } = post
-            console.warn({ coverImage })
-            // const coverImageUrl = coverImage && require(coverImage)
-            // console.warn({ coverImageUrl })
+
             return (
               <Box sx={{ pb: 5 }} key={post.slug}>
                 <Heading sx={{ pb: 2, position: "relative" }}>

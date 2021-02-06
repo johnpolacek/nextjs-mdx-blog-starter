@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import theme from "./Theme"
 import { Box } from "theme-ui"
 import PropTypes from "prop-types"
-import Head from "./Head"
+import { DocHead } from "./DocHead"
 import Style from "./Style"
 import ThemeToggle from "../ui/ThemeToggle"
 import Header from "../ui/Header"
@@ -42,7 +42,7 @@ const Layout = (props) => {
 
   return (
     <>
-      <Head {...props} />
+      <DocHead {...props} />
       {codeToRunOnClient && (
         <script dangerouslySetInnerHTML={{ __html: codeToRunOnClient }} />
       )}
