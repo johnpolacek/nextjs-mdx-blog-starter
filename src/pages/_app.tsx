@@ -1,11 +1,11 @@
 import React from "react"
 import NextApp from "next/app"
 
-import { Themed, ThemeProvider } from "theme-ui"
+import { ThemeProvider } from "theme-ui"
 import { theme } from "layout/Theme"
 
 export default class App extends NextApp {
-  render() {
+  render(): JSX.Element {
     const { Component, pageProps } = this.props
     return (
       <ThemeProvider theme={theme}>

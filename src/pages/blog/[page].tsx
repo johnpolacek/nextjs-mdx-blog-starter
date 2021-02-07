@@ -1,5 +1,5 @@
 import config from "../../../blog.config"
-import Wrapper from "../../layout/Wrapper"
+import Wrapper from "layout/Wrapper"
 import Posts, { Post } from "../../views/Posts"
 import { getAllPosts } from "../../api"
 import { NextPage } from "next"

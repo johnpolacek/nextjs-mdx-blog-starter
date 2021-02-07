@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Themed } from "theme-ui"
+import { jsx } from "theme-ui"
 import MDX from "@mdx-js/runtime"
 import { Flex, Box, Heading } from "theme-ui"
 import Container from "../ui/Container"
@@ -45,8 +45,8 @@ const Posts: (props: Props) => JSX.Element = ({
             return (
               <Box sx={{ pb: 5 }} key={post.slug}>
                 <Heading sx={{ pb: 2, position: "relative" }}>
-                  {post.draft && <DraftBadge />} TEST test hey
-                  <Link href={"/" + post.slug}>{post.title}</Link>
+                  {post.draft && <DraftBadge />}
+                  <Link href={`/${post.slug}`}>{post.title}</Link>
                 </Heading>
                 {coverImage && (
                   <Box
@@ -73,25 +73,21 @@ const Posts: (props: Props) => JSX.Element = ({
                 <Box sx={{ pb: 3 }}>
                   <MDX>{post.excerpt}</MDX>
                 </Box>
-                <Link href={"/" + post.slug} passHref>
-                  <a>Read more...</a>
-                </Link>
+                <Link href={"/" + post.slug}>Read more...</Link>
               </Box>
             )
           })}
       <Flex sx={{ fontStyle: "italic" }}>
         <Box sx={{ width: "50%", py: 3, textAlign: "left" }}>
           {prevPosts !== null && (
-            <Link href={"/blog/" + prevPosts} passHref>
+            <Link href={"/blog/" + prevPosts}>
               <a>« see newer posts</a>
             </Link>
           )}
         </Box>
         <Box sx={{ width: "50%", py: 3, pr: 3, textAlign: "right" }}>
           {nextPosts !== null && (
-            <Link href={"/blog/" + nextPosts} passHref>
-              <a>see older posts »</a>
-            </Link>
+            <Link href={"/blog/" + nextPosts}>see older posts »</Link>
           )}
         </Box>
       </Flex>

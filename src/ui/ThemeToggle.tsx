@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
-import { Box, useColorMode } from "theme-ui"
-import Button from "./Button"
+import { Box, useColorMode, Button } from "theme-ui"
 
 const ThemeToggle: React.FC = () => {
   const [colorMode, setColorMode] = useColorMode()
@@ -23,12 +22,12 @@ const ThemeToggle: React.FC = () => {
       }}
     >
       <Button
-        sx={{ bg: "gray", py: 1, px: 2, fontSize: 0 }}
+        sx={{ bg: "gray", py: 1, px: 2, fontSize: 3, minWidth: 75 }}
         onClick={(_e) => {
           setColorMode(colorMode === "default" ? "dark" : "default")
         }}
       >
-        switch to {colorMode === "default" ? "dark" : "light"} mode
+        {colorMode === "default" ? "Light" : "Dark"}
       </Button>
     </Box>
   )
