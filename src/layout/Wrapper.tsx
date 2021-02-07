@@ -3,6 +3,7 @@ import config from "../../blog.config"
 import ReactGA from "react-ga"
 
 const Wrapper = (props) => {
+  // TODO: should this use using a hook?
   if (typeof config.analytics === "string" && config.analytics !== "") {
     ReactGA.initialize(config.analytics)
     ReactGA.set({ anonymizeIp: true })

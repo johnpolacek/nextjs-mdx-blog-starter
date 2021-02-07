@@ -5,7 +5,7 @@ import NextLink from "next/link"
 
 interface Props {
   href: string
-  external: boolean
+  external?: boolean
 }
 
 /**

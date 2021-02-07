@@ -6,16 +6,16 @@ import { NextPage } from "next"
 
 interface Props {
   posts: Post[]
-  prevPosts: Post[]
-  nextPosts: Post[]
+  prevPage: number | null
+  nextPage: number | null
   pageIndex: number
   numPages: number
 }
 
 const PostsPage: NextPage<Props> = ({
   posts,
-  prevPosts,
-  nextPosts,
+  prevPage,
+  nextPage,
   pageIndex,
   numPages,
 }) => (
@@ -26,7 +26,7 @@ const PostsPage: NextPage<Props> = ({
     imageUrl={config.shareImage}
     imageAlt={config.shareImageAlt}
   >
-    <Posts posts={posts} prevPosts={prevPosts} nextPosts={nextPosts} />
+    <Posts posts={posts} prevPage={prevPage} nextPage={nextPage} />
   </Wrapper>
 )
 

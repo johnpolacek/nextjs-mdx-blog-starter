@@ -21,14 +21,14 @@ export interface Post {
 
 interface Props {
   posts: Post[]
-  prevPosts: Post[]
-  nextPosts: Post[]
+  prevPage: number | null
+  nextPage: number | null
 }
 
 const Posts: (props: Props) => JSX.Element = ({
   posts,
-  prevPosts,
-  nextPosts,
+  prevPage: prevPosts,
+  nextPage: nextPosts,
 }) => {
   const isLocal = process.env.NODE_ENV === "development"
 

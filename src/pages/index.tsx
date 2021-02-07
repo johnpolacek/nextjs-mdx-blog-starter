@@ -1,9 +1,20 @@
 import config from "../../blog.config"
 import Wrapper from "../layout/Wrapper"
-import Posts from "../views/Posts"
+import Posts, { Post } from "../views/Posts"
 import { getAllPosts } from "../api"
+import { GetStaticProps, NextPage } from "next"
 
-const PostsPage = ({ posts, prevPosts, nextPosts }) => (
+interface Props {
+  posts: Post[] // Post is another interface i have already defined elsewhere
+  prevPage: number | null
+  nextPage: number | null
+}
+
+const PostsPage: NextPage<Props> = ({
+  posts,
+  prevPage: prevPage,
+  nextPage: nextPage,
+}) => (
   <Wrapper
     url={config.url}
     title={config.title}
@@ -11,11 +22,11 @@ const PostsPage = ({ posts, prevPosts, nextPosts }) => (
     imageUrl={config.shareImage}
     imageAlt={config.shareImageAlt}
   >
-    <Posts posts={posts} prevPosts={prevPosts} nextPosts={nextPosts} />
+    <Posts posts={posts} prevPage={prevPage} nextPage={nextPage} />
   </Wrapper>
 )
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps<Props> = async function () {
   const posts = getAllPosts([
     "title",
     "date",
@@ -31,11 +42,14 @@ export async function getStaticProps() {
 
   const startIndex = 0
   const endIndex = config.postsPerPage
-  const prevPosts = null
-  const nextPosts = endIndex >= posts.length ? null : 2
+  const nextPage = endIndex >= posts.length ? null : 2
 
   return {
-    props: { posts: posts.slice(startIndex, endIndex), prevPosts, nextPosts },
+    props: {
+      posts: posts.slice(startIndex, endIndex),
+      prevPage: null,
+      nextPage: nextPage,
+    },
   }
 }
 
