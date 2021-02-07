@@ -1,16 +1,18 @@
-import { Box, Link, Image } from 'theme-ui'
+import { Box, Image, Button, Link } from "theme-ui"
 
 Created by **[John Polacek](https://johnpolacek.com)**, a web developer from Chicago. **Follow me at [@johnpolacek](https://twitter.com/johnpolacek)**
+
+<!-- two different ways to make a link that looks like a button -->
 
 <Box>
   <Link
     sx={{
-      display: "inline-block", 
+      display: "inline-block",
       bg: "primary",
       px: 4,
       py: 3,
-      mx: 3, 
-      my: 3, 
+      mx: 3,
+      my: 3,
       color: "white",
       textDecoration: "none",
       fontSize: 3,
@@ -21,22 +23,30 @@ Created by **[John Polacek](https://johnpolacek.com)**, a web developer from Chi
     View on Github
   </Link>
   <Link
-    sx={{
-      display: "inline-block", 
-      bg: "secondary",
-      px: 4,
-      py: 3,
-      mx: 3, 
-      my: 3, 
-      color: "white",
-      textDecoration: "none",
-      fontSize: 3,
-      borderRadius: "4px",
-    }}
     download
     href="https://github.com/johnpolacek/nextjs-mdx-blog-starter/archive/main.zip"
   >
-    <Image width="24" height="24" sx={{position:"relative", top:"2px", left: "-8px"}} src="/download.svg" alt="" />Download
+    <Button
+      sx={{
+        display: "inline-block",
+        bg: "secondary",
+        px: 4,
+        py: 3,
+        mx: 3,
+        my: 3,
+        color: "white",
+        fontSize: 3,
+        borderRadius: "4px",
+      }}
+    >
+      <Image
+        width="24"
+        height="24"
+        sx={{ position: "relative", top: "2px", left: "-8px" }}
+        src="/download.svg"
+        alt=""
+      />
+      Download
+    </Button>
   </Link>
-  
 </Box>
