@@ -11,28 +11,13 @@ import Footer from "../ui/Footer"
 // // TODO: revisit whether this is the best way
 // eslint-disable-next-line prefer-const
 let codeToRunOnClient: string | null = null
-// if (Object.keys(theme?.colors?.modes || {}).length !== 0) {
-//   codeToRunOnClient = `
-//   (function() {
-//     const theme = ${JSON.stringify(theme)}
-
-//     let mode = localStorage.getItem("theme-ui-color-mode")
-
-//     if (!mode) {
-//       const mql = window.matchMedia('(prefers-color-scheme: dark)')
-//       if (typeof mql.matches === 'boolean' && mql.matches) {
-//         mode = "dark"
-//       }
-//     }
-
-//     if (mode && typeof theme.colors.modes === "object" && typeof theme.colors.modes[mode] === "object") {
-//       const root = document.documentElement
-//       Object.keys(theme.colors.modes[mode]).forEach((colorName) => {
-//         document.body.style.setProperty("--theme-ui-colors-"+colorName, "var(--theme-ui-colors-primary,"+theme.colors.modes[mode][colorName]+")")
-//       })
-//     }
-//   })()`
-// }
+const isLocal = process.env.NODE_ENV === "development"
+if (isLocal) {
+  codeToRunOnClient = `
+  (function() {
+    console.warn("Hello from some script")
+  })()`
+}
 
 export const Layout: React.FC<DocHeadProps> = (props) => {
   useEffect(() => {
