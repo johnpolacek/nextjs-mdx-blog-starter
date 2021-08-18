@@ -14,16 +14,16 @@
     "@emotion/react": "^11.1.4",
     "@mdx-js/loader": "^1.6.22",
     "@mdx-js/runtime": "^1.6.22",
-    "@next/mdx": "^10.0.5",
+    "@next/mdx": "^11.1.0",
     "disqus-react": "^1.0.10",
     "gray-matter": "^4.0.2",
-    "next": "^10.0.5",
+    "next": "^11.1.0",
     "prism-react-renderer": "^1.1.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-ga": "^3.3.0",
-    "theme-ui": "^0.3.5"
+    "theme-ui": "^0.10.0"
   },
   "devDependencies": {
     "onchange": "^7.1.0",
