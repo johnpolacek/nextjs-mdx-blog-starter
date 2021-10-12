@@ -2,7 +2,6 @@ import { Button as Btn } from "theme-ui"
 
 const Button = (props) => (
   <Btn
-    disabled={props.disabled}
     sx={{
       fontSize: 3,
       px: 3,
