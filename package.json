@@ -15,7 +15,7 @@
     "@mdx-js/loader": "^1.6.22",
     "@mdx-js/runtime": "^1.6.22",
     "@next/mdx": "^11.1.0",
-    "disqus-react": "^1.0.10",
+    "disqus-react": "^1.1.2",
     "gray-matter": "^4.0.2",
     "next": "^11.1.2",
     "prism-react-renderer": "^1.1.1",
@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "onchange": "^7.1.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.5.1"
   },
   "repository": "https://github.com/johnpolacek/nextjs-mdx-blog-starter",
   "license": "MIT"
